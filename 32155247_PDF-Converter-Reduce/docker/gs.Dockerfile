@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y ghostscript
 WORKDIR /app
 
 # Copia os arquivos ou scripts necessários para a pasta de trabalho
-# COPY ./seus_arquivos /app/
+COPY ./seus_arquivos /app/
 
 # Defina o comando de inicialização
-# CMD ["seu_comando_ghostscript"]
+CMD ["seu_comando_ghostscript"]
 
 # Exponha a porta se o Ghostscript fornecer um serviço
-# EXPOSE 8080
+EXPOSE 8080
