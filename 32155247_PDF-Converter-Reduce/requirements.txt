@@ -1,0 +1,4 @@
+Flask==2.1.0
+werkzeug==2.1.0
+ghostscript==0.7
+poppler-utils==0.96.0
