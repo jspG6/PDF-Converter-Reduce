@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Converter Reduce</title>
+</head>
+<body>
+    <h1>Redux de Res</h1>
+    <form action="/reduce_resolution" method="post" enctype="multipart/form-data">
+        <select name="resolution">
+            <option value="low">Baixa</option>
+            <option value="medium">Media</option>
+            <option value="high">Alta</option>
+        </select>
+        <input type="file" name="pdf_file">
+        <input type="submit" value="Comprimir">
+    </form>
+
+    <h1>Converter de Texto</h1>
+    <form action="/convert_to_text" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_file">
+        <input type="submit" value="Converter para Texto">
+    </form>
+</body>
+</html>
