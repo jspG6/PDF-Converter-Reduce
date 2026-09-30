@@ -40,13 +40,18 @@ O código é dividido nas seguintes partes principais:
 
 ### Pré-requisitos
 
-Você precisará de **Python 3.8+** instalado e, opcionalmente, do **Docker** se desejar usar a funcionalidade de extração de texto isolada.
+Você precisará de **Python 3.9+** instalado e, opcionalmente, do **Docker** se desejar usar a funcionalidade de extração de texto isolada.
+
+Os serviços executam os comandos `gs` (Ghostscript) e `pdftotext` (Poppler). Instale essas ferramentas no sistema e disponibilize os executáveis no `PATH`. Em Debian/Ubuntu, use `sudo apt-get install ghostscript poppler-utils`. O pacote `poppler-utils` é uma dependência do sistema, instalada com `apt-get` nos Dockerfiles, e não com `pip`.
 
 ### Instalação (Python)
 
 Para rodar o serviço de redução, configure o ambiente virtual e instale as dependências:
 
 ```bash
+# Entre na pasta que contém requirements.txt
+cd 32155247_PDF-Converter-Reduce
+
 # 1. Crie e ative o ambiente virtual
 python -m venv venv
 source venv/bin/activate  # No Windows use: .\venv\Scripts\activate
@@ -56,3 +61,4 @@ pip install -r requirements.txt
 
 # 3. Execute o serviço
 python app/servico_reduzirResolucao.py
+```
